@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; }
+  * body::-webkit-scrollbar {
+    width: 10px; }
+  * body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.507);
+    border-radius: 10px;
+    border: 4px solid white; }
+
+/*Login and LogUp*/
+.login {
+  width: 100%;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; }
+  @media (min-width: 768px) {
+    .login {
+      padding: 5vh 0; } }
+  .login .login-contain {
+    position: relative;
+    width: 1100px;
+    display: flex;
+    justify-content: center; }
+    @media (min-width: 768px) {
+      .login .login-contain {
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.07); } }
+    .login .login-contain .contain-left {
+      background: url("https://via.placeholder.com/510x653.png/f2f2f2/dedede?Text=510x653") no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      color: #2b2b2b; }
+      .login .login-contain .contain-left .text-start {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      @media (max-width: 768px) {
+        .login .login-contain .contain-left {
+          display: none; } }
+    .login .login-contain .contain-right {
+      width: 50%;
+      color: #2b2b2b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      padding: 0 5vw;
+      padding-top: 5vh; }
+      .login .login-contain .contain-right .logIn {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .login .login-contain .contain-right .logIn .login-title {
+          width: 100%;
+          min-width: 290px;
+          margin-bottom: 15px;
+          padding-bottom: 21px;
+          border-bottom: 1px solid rgba(117, 117, 117, 0.13); }
+          .login .login-contain .contain-right .logIn .login-title p {
+            margin-top: 4px; }
+          @media (min-width: 768px) {
+            .login .login-contain .contain-right .logIn .login-title {
+              display: none; } }
+        .login .login-contain .contain-right .logIn .Email {
+          display: flex;
+          flex-direction: column;
+          width: 100%; }
+          .login .login-contain .contain-right .logIn .Email label {
+            margin: 0 0 4px; }
+          .login .login-contain .contain-right .logIn .Email input {
+            padding: 10px 12px;
+            border-radius: 0.5rem;
+            outline-style: none;
+            border: 1px solid rgba(117, 117, 117, 0.13);
+            font-size: 14px; }
+          .login .login-contain .contain-right .logIn .Email .error-email {
+            margin: 5px 0 10px;
+            color: red;
+            display: none; }
+          .login .login-contain .contain-right .logIn .Email .error-email-incorrect {
+            margin: 5px 0 10px;
+            color: red; }
+            .login .login-contain .contain-right .logIn .Email .error-email-incorrect a {
+              color: red; }
+        .login .login-contain .contain-right .logIn .password {
+          display: flex;
+          flex-direction: column;
+          width: 100%; }
+          .login .login-contain .contain-right .logIn .password .label-forgot {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            margin-top: 12px; }
+          .login .login-contain .contain-right .logIn .password input {
+            padding: 10px 12px;
+            border-radius: 0.5rem;
+            outline-style: none;
+            border: 1px solid rgba(117, 117, 117, 0.13);
+            font-size: 14px; }
+          .login .login-contain .contain-right .logIn .password .error-password {
+            margin: 5px 0 10px;
+            color: red; }
+          .login .login-contain .contain-right .logIn .password .error-password-Incorrect {
+            margin: 5px 0 10px;
+            color: red;
+            display: none; }
+            .login .login-contain .contain-right .logIn .password .error-password-Incorrect a {
+              color: red;
+              font-weight: 600; }
+        .login .login-contain .contain-right .logIn .phone {
+          display: flex;
+          flex-direction: column;
+          width: 100%; }
+          .login .login-contain .contain-right .logIn .phone label {
+            margin: 0 0 4px;
+            margin-top: 12px; }
+          .login .login-contain .contain-right .logIn .phone input {
+            padding: 10px 12px;
+            border-radius: 0.5rem;
+            outline-style: none;
+            border: 1px solid rgba(117, 117, 117, 0.13);
+            font-size: 14px; }
+          .login .login-contain .contain-right .logIn .phone .error-phone {
+            margin: 5px 0 10px;
+            color: red;
+            display: none; }
+        .login .login-contain .contain-right .logIn .contract {
+          font-size: 12px;
+          margin: 25px 0;
+          width: 100%; }
+        .login .login-contain .contain-right .logIn .login-button {
+          width: 100%;
+          color: white;
+          padding: 10px 12px;
+          border-radius: 0.5rem;
+          outline-style: none;
+          background-color: rgba(228, 0, 0, 0.871);
+          border: none;
+          font-size: 14px;
+          margin-bottom: 15px;
+          cursor: pointer; }
+        .login .login-contain .contain-right .logIn .not-close {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          margin: 4px 0 20px 0; }
+          .login .login-contain .contain-right .logIn .not-close label {
+            padding-left: 5px; }
+        .login .login-contain .contain-right .logIn .logIn-alternative {
+          width: 80%;
+          margin: 20px 0 0 0;
+          display: flex;
+          flex-direction: column;
+          border-top: 1px solid rgba(117, 117, 117, 0.13); }
+          .login .login-contain .contain-right .logIn .logIn-alternative .login-with {
+            align-self: center;
+            margin-top: -10px;
+            background-color: white;
+            padding: 0 10px; }
+          .login .login-contain .contain-right .logIn .logIn-alternative .alternative {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 40px; }
+            .login .login-contain .contain-right .logIn .logIn-alternative .alternative a {
+              text-decoration: none;
+              color: #2b2b2b;
+              margin: 0 8px; }
+              .login .login-contain .contain-right .logIn .logIn-alternative .alternative a i {
+                padding: 12px;
+                border-radius: 0.5rem;
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.07);
+                font-size: 17px; }
+              .login .login-contain .contain-right .logIn .logIn-alternative .alternative a p {
+                margin-top: 5px; }
+        .login .login-contain .contain-right .logIn .login-footer {
+          font-size: 12px;
+          margin: 24px 0;
+          width: 100%; }
+
+/* Topbar*/
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  background: #fff;
+  color: #202124;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); }
+  .topbar .topbar_logo .link_logo img {
+    width: 90px;
+    background-position: center;
+    object-fit: cover; }
+  .topbar .topbar_nav .list_nav {
+    display: flex;
+    align-items: center; }
+    .topbar .topbar_nav .list_nav .item-icon {
+      list-style: none;
+      position: relative; }
+      .topbar .topbar_nav .list_nav .item-icon .counter {
+        position: absolute;
+        border-radius: 50%;
+        padding: 4px 7px;
+        background-color: #e40000;
+        font-size: 11px;
+        top: -10px;
+        right: -10px; }
+  .topbar .topbar_nav .item_profile {
+    list-style: none;
+    margin-left: 30px; }
+    .topbar .topbar_nav .item_profile .link_profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      text-decoration: none; }
+      .topbar .topbar_nav .item_profile .link_profile img {
+        width: 35px;
+        margin-left: 10px;
+        object-fit: cover;
+        border-radius: 50%; }
+
+/* End Topbar*/
+/*Sidebar-menu*/
+.aside-container {
+  width: 300px;
+  height: 90vh;
+  background: rgba(255, 255, 255, 0.651);
+  backdrop-filter: blur(15px);
+  border: 1px solid black;
+  position: fixed; }
+  .aside-container .aside-open {
+    height: 300px;
+    width: 100%; }
+    .aside-container .aside-open ul {
+      padding: 8px 0 8px 0; }
+      .aside-container .aside-open ul h4 {
+        padding: 0px 0 0px 30px;
+        margin-bottom: 10px;
+        font-size: 16px; }
+      .aside-container .aside-open ul li {
+        padding: 2px 24px;
+        display: flex;
+        align-items: center; }
+        .aside-container .aside-open ul li a {
+          margin-left: 5px;
+          color: #202124;
+          text-decoration: none;
+          font-size: 14px;
+          width: 100%; }
+  .aside-container .aside-footer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column; }
+    .aside-container .aside-footer p {
+      font-size: 14px;
+      margin-top: 10px;
+      margin-left: 30px;
+      color: #2b2b2b; }
+    .aside-container .aside-footer a {
+      margin-left: 30px;
+      color: black;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 5px; }
+      .aside-container .aside-footer a:hover {
+        color: #202124; }
+    .aside-container .aside-footer .developers {
+      margin-bottom: 20px; }
+
+.section {
+  width: 100%;
+  height: 100%;
+  display: flex; }
+
+/*End Sidebar-menu*/
+.products {
+  margin-left: 300px;
+  background-color: black;
+  color: white; }
+
+.users {
+  margin-left: 300px;
+  background-color: black;
+  color: white; }

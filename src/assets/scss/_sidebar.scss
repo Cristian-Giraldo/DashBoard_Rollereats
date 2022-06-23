@@ -1,0 +1,65 @@
+/*Sidebar-menu*/
+.aside-container {
+    width: 300px;
+    height: 90vh;
+    background: rgba(255, 255, 255, 0.651);
+    backdrop-filter: blur(15px);
+    border: 1px solid black;
+    position: fixed;
+
+    .aside-open{
+        height: 300px;
+        width: 100%;
+        & ul {
+            padding: 8px 0 8px 0; 
+            & h4 {
+                padding: 0px 0 0px 30px;
+                margin-bottom: 10px;
+                font-size: 16px; 
+            }
+            & li {
+                padding: 2px 24px;
+                display: flex; 
+                align-items: center; 
+                & a {
+                    margin-left: 5px;
+                    color: #202124;
+                    text-decoration: none;
+                    font-size: 14px;
+                    width: 100%; 
+                }
+            }
+        }
+    }
+    .aside-footer{
+        margin-top: 30px; 
+        display: flex;
+        flex-direction: column;
+        & p {
+            font-size: 14px;
+            margin-top: 10px; 
+            margin-left: 30px;
+            color: #2b2b2b;
+        }
+        & a{
+            margin-left: 30px;
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 5px;
+            &:hover{
+                color: #202124;
+            }
+        }
+        & .developers{
+            margin-bottom: 20px;
+        }
+    }
+}
+.section{
+    width: 100%;
+    height: 100%;
+    display: flex;  
+}
+
+/*End Sidebar-menu*/

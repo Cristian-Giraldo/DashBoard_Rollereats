@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+//Librerias
+import React from 'react';
+import {Routes, Route} from 'react-router-dom'
+import './assets/css/main.css';
+
+//Componentes
+import LogIn from './components/LogIn';
+import Products from './components/Products';
+import Section from './components/Section';
+import Topbar from './components/TopBar';
+import Users from './components/Users';
+// import logo from './logo.svg';
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Topbar />
+      <Routes >
+        <Route path="/" element={<LogIn />} />
+        <Route path="section" element={<Section />}>
+          <Route path="users" element={<Users />} />
+          <Route path="products" element={<Products />} />
+        </ Route>
+      </Routes> 
+    </>
   );
-}
+} 
 
-export default App;
