@@ -3,16 +3,16 @@ import React from "react";
 import {NavLink, Outlet} from 'react-router-dom';
 
 //Components
-import {AiOutlineRest} from 'react-icons/ai'
-import {BiUserCheck} from 'react-icons/bi'
+import {MdNoFood} from 'react-icons/md'
+import {FaUserFriends} from 'react-icons/fa'
 import Footer from "./Footer";
 
 export default function Sidebar(){
     const navLinkStyles = ({ isActive }) => {
         return {
             fontWeight: isActive ? "bold" : "normal",
-            textDecoration: isActive ? "none" : "underline"
-        };
+                backgroundColor: isActive ? "white" : 'lavender'
+            };
     };
     return (
         <>
@@ -21,12 +21,10 @@ export default function Sidebar(){
                     <ul>
                         <h4>Panels</h4>
                         <li>
-                            <BiUserCheck size={24} />
-                            < NavLink style={navLinkStyles} to="users">Users</NavLink>
+                            < NavLink className='Link_panels' style={navLinkStyles} to="users"><FaUserFriends size={24} /><span className="item_panel">Users</span></NavLink>
                         </li>
                         <li>
-                            <AiOutlineRest size={22} />
-                            < NavLink style={navLinkStyles} to="products">Products</NavLink>
+                            < NavLink className='Link_panels' style={navLinkStyles} to="products"><MdNoFood size={22} /><span className="item_panel" >Products</span></NavLink>
                         </li>
                     </ul>
                 </div>

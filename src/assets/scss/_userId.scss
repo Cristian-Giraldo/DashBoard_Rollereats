@@ -1,0 +1,29 @@
+.userId{
+    margin-left: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    .user-contein{
+        display: flex;
+        flex-wrap: wrap;
+        img{
+            width: 180px;
+            border-radius: 50%;
+        }
+        .user-inform{
+           display: flex;
+           flex-direction: column;
+           padding-top: 50px;
+           margin-left: 40px;
+           .name{
+            font-size: 24px;
+            font-weight: 600;
+            margin: 10px 0;
+           }
+           .inf{
+            margin: 5px 0;
+           }
+        }
+    }
+}

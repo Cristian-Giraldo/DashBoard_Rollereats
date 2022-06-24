@@ -1,8 +1,12 @@
 import React from "react";
 import {NavLink} from 'react-router-dom';
 import axios from "axios";
+import {useNavigate,Navigate} from 'react-router-dom';
 
 export default function LogIn(){
+
+    const navigate = useNavigate();
+    let token = sessionStorage.getItem('token');
 
     const submitHandler = e =>{
         e.preventDefault();
@@ -33,11 +37,13 @@ export default function LogIn(){
             .then(res=>{ 
                 console.log(res.data);
                 const tokenRecibido = res.data.token;
-                localStorage.setItem('token', tokenRecibido)
+                sessionStorage.setItem('token',tokenRecibido);
+                navigate('/index'); 
             }); 
     }
     return(
-       /* Login */
+        <>
+
         <div className="login">
             <div className="login-contain">
                 <div className="contain-left">
@@ -82,6 +88,6 @@ export default function LogIn(){
                 </div>
             </div>
         </div>
-        /* end Login*/
+        </>
     )
 }
