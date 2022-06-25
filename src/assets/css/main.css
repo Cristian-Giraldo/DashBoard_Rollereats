@@ -23,6 +23,7 @@
       padding: 5vh 0; } }
   .login .login-contain {
     position: relative;
+    margin-top: 80px;
     width: 1100px;
     display: flex;
     justify-content: center; }
@@ -197,7 +198,10 @@
   padding: 0 20px;
   background: #fff;
   color: #202124;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.875rem;
+  position: fixed;
+  z-index: 10; }
   .topbar .topbar_logo .link_logo img {
     width: 90px;
     background-position: center;
@@ -235,20 +239,18 @@
 /*Sidebar-menu*/
 .aside-container {
   width: 300px;
-  height: 90vh;
+  height: 100vh;
   background: lavender;
   backdrop-filter: blur(15px);
-  position: fixed; }
+  position: fixed;
+  font-size: 0.875rem; }
   .aside-container .aside-open {
     height: 300px;
-    width: 100%; }
+    width: 100%;
+    margin-top: 80px; }
     .aside-container .aside-open ul {
-      padding: 8px 0 8px 0; }
-      .aside-container .aside-open ul h4 {
-        padding: 0px 0 0px 30px;
-        margin-bottom: 10px;
-        font-size: 16px;
-        margin-bottom: 20px; }
+      padding: 8px 0 8px 0;
+      margin-top: 15px; }
       .aside-container .aside-open ul li {
         display: flex;
         align-items: center; }
@@ -292,7 +294,7 @@
 .DashBoard_product {
   margin-left: 300px;
   width: 100%;
-  padding-top: 20px; }
+  margin-top: 80px; }
   .DashBoard_product .inform-product {
     display: flex;
     padding: 20px 0;
@@ -311,50 +313,44 @@
       .DashBoard_product .inform-product .totalUsers h1 {
         font-size: 60px;
         margin-bottom: 10px; }
-    .DashBoard_product .inform-product .product {
-      width: 200px;
-      height: auto;
-      margin: 20px 15px 20px 15px;
+    .DashBoard_product .inform-product .contein-lastProduct {
       display: flex;
       flex-direction: column;
+      background-color: white;
       align-items: center;
+      justify-content: center;
+      text-decoration: none;
       color: black;
+      width: 300px;
+      height: 200px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.349);
       position: relative;
-      cursor: pointer; }
-      .DashBoard_product .inform-product .product:hover {
-        box-shadow: rgba(60, 64, 67, 0.26) 0px 1px 2px 0px, rgba(60, 64, 67, 0.05) 0px 1px 3px 1px; }
-      .DashBoard_product .inform-product .product:hover .contein-img img {
-        transform: scale(1.4) rotate(20deg); }
-      .DashBoard_product .inform-product .product a {
-        text-decoration: none;
-        color: black; }
-        .DashBoard_product .inform-product .product a .contein-img {
-          overflow: hidden; }
-          .DashBoard_product .inform-product .product a .contein-img img {
-            width: 198px;
-            height: 240px;
-            object-fit: cover;
-            transition: all .5s ease;
-            width: 120%; }
-        .DashBoard_product .inform-product .product a .data {
-          display: flex;
-          flex-direction: column;
-          width: 100%; }
-          .DashBoard_product .inform-product .product a .data .initial-data {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 5px 0;
-            padding: 0 15px;
-            position: relative; }
-            .DashBoard_product .inform-product .product a .data .initial-data .name {
-              font-size: 17px;
-              margin-bottom: 10px; }
+      font-size: 14px; }
+      .DashBoard_product .inform-product .contein-lastProduct .title {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        background-color: black;
+        padding: 10px 10px;
+        color: white;
+        z-index: 1;
+        font-weight: 600; }
+      .DashBoard_product .inform-product .contein-lastProduct .lastUser {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        height: 140px; }
+        .DashBoard_product .inform-product .contein-lastProduct .lastUser img {
+          width: 100%;
+          background-size: cover; }
+      .DashBoard_product .inform-product .contein-lastProduct .last_email {
+        margin: 20px 10px; }
 
 .users {
   margin-left: 300px;
   width: 100%;
-  padding-top: 20px; }
+  margin-top: 80px;
+  font-size: 14px; }
   .users .inform-users {
     display: flex;
     padding: 20px 0;
@@ -373,7 +369,9 @@
       .users .inform-users .totalUsers h1 {
         font-size: 60px;
         margin-bottom: 10px; }
-    .users .inform-users .contein-lastUser {
+      .users .inform-users .totalUsers .title {
+        font-size: 16px; }
+    .users .inform-users .contein-lastUser, .users .inform-users .contein-lastProduct {
       display: flex;
       flex-direction: column;
       background-color: white;
@@ -383,41 +381,50 @@
       color: black;
       width: 300px;
       height: 200px;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.349); }
-      .users .inform-users .contein-lastUser .lastUser {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.349);
+      position: relative;
+      font-size: 14px; }
+      .users .inform-users .contein-lastUser .title, .users .inform-users .contein-lastProduct .title {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        background-color: black;
+        padding: 10px 10px;
+        color: white;
+        z-index: 1;
+        font-weight: 600; }
+      .users .inform-users .contein-lastUser .lastUser, .users .inform-users .contein-lastProduct .lastUser {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center; }
-        .users .inform-users .contein-lastUser .lastUser img {
-          width: 60px;
-          border-radius: 50%; }
-        .users .inform-users .contein-lastUser .lastUser p {
-          font-weight: 600;
-          margin-left: 10px; }
-      .users .inform-users .contein-lastUser .title-last {
-        margin-top: 10px; }
+        overflow: hidden;
+        height: 140px; }
+        .users .inform-users .contein-lastUser .lastUser img, .users .inform-users .contein-lastProduct .lastUser img {
+          width: 100%;
+          background-size: cover; }
+      .users .inform-users .contein-lastUser .last_email, .users .inform-users .contein-lastProduct .last_email {
+        margin: 20px 10px; }
 
 .userId {
   margin-left: 300px;
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 50px; }
+  margin-top: 100px; }
   .userId .user-contein {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.192); }
     .userId .user-contein img {
-      width: 180px;
-      border-radius: 50%; }
+      width: 280px; }
     .userId .user-contein .user-inform {
       display: flex;
       flex-direction: column;
-      padding-top: 50px;
-      margin-left: 40px; }
-      .userId .user-contein .user-inform .name {
-        font-size: 24px;
-        font-weight: 600;
-        margin: 10px 0; }
-      .userId .user-contein .user-inform .inf {
-        margin: 5px 0; }
+      padding: 50px 40px;
+      font-size: 0.875rem; }
+      .userId .user-contein .user-inform .label {
+        margin-top: 6px; }
+      .userId .user-contein .user-inform .inf_Appi {
+        margin-left: 10px;
+        padding: 5px 10px;
+        color: rgba(0, 0, 0, 0.705); }

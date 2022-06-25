@@ -1,12 +1,9 @@
 import React from "react";
+import { Link} from "react-router-dom";
 import { useEffect, useState} from "react";
 import axios from "axios";
 
-//Components
-import TotalUsers from "./TotalUser";
-import LastUser from "./LastUser";
- 
-export default function Users(){
+export default function LastUser(){
 
     const [userList, setUserList] = useState([]);
 
@@ -20,17 +17,15 @@ export default function Users(){
             .catch(error=>{
                 console.log('error')
             })
-    },[setUserList]);
+    },[setUserList]); 
 
-    console.log(userList)
     return(
-        <>
-        <div className="users">
-            <div className="inform-users">
-                <TotalUsers />
-                <LastUser />
+        <Link to="id" className="contein-lastUser">
+            <p className="title">Last user create</p>
+            <div className="lastUser" >
+                <img src="https://i.postimg.cc/tC3RMPhV/15399268807-f04a0040bb-n.jpg" alt="logo" />
             </div>
-        </div>
-        </>
+            <p className="last_email">{userList.email}</p>
+        </Link>
     )
 }

@@ -1,12 +1,13 @@
 import React from "react";
 import {NavLink} from 'react-router-dom';
 import axios from "axios";
-import {useNavigate,Navigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 export default function LogIn(){
 
     const navigate = useNavigate();
     let token = sessionStorage.getItem('token');
+    console.log(token);
 
     const submitHandler = e =>{
         e.preventDefault();
@@ -16,7 +17,6 @@ export default function LogIn(){
 
         let regexEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         console.log(regexEmail.test(email));
-        //Validaciones
        // Validaciones
        if(email === '' || password ===''){
         console.log('Los campos no pueden estar vacios');
@@ -43,7 +43,6 @@ export default function LogIn(){
     }
     return(
         <>
-
         <div className="login">
             <div className="login-contain">
                 <div className="contain-left">

@@ -1,28 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState} from "react";
+import axios from "axios";
 
 //Components
 import TotalProducts from "./TotalProducts";
 import ListProduct from "./ListProduct";
+import LastProduct from "./LastProduct";
 
 export default function Products(){
+    
+    const [productList, setProductList] = useState([]);
+
+    useEffect(()=>{
+        const endPoint = 'http://localhost:3000/restaurantes/listas'
+        axios.get(endPoint)
+            .then(response =>{
+                const apiData = response.data.lastProduct.productImg;
+                setProductList(apiData)  
+            })
+            .catch(error=>{
+                console.log('error')
+            })
+    },[setProductList]);
+    console.log(productList)
+
     return(
         <div className="DashBoard_product">
             <div className="inform-product">
                 <TotalProducts />
-                <article className="product" data-open="modal-showproduct">
-                    <Link to ="/productDetail">
-                        <div className="contein-img">
-                            <img src="https://th.bing.com/th/id/OIP.Z8couH1GODI_3Ana6zXLBQHaE6?pid=ImgDet&rs=1" alt=""/>
-                        </div>
-                        <div className="data">
-                            <div className="initial-data">
-                                <h3 className="name">Product name</h3>
-                            </div>
-                        </div>
-                    </Link>
-                    <p>Last product create</p>
-                </article>
+                <LastProduct />
             </div>
             <ListProduct />
         </div>

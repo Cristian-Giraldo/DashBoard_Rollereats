@@ -1,7 +1,7 @@
 .DashBoard_product{
     margin-left: 300px; 
     width: 100%;
-    padding-top: 20px;
+    margin-top: 80px;
     .inform-product{
         display: flex; 
         padding: 20px 0;
@@ -22,54 +22,42 @@
                 margin-bottom: 10px;
             }
         }
-        .product{
-            width: 200px;
-            height: auto;
-            margin: 20px 15px 20px 15px;
+        .contein-lastProduct{
             display: flex;
             flex-direction: column;
+            background-color: white;
             align-items: center;
+            justify-content: center;
+            text-decoration: none;
             color: black;
-            position: relative;
-            cursor: pointer;
-            &:hover{
-                box-shadow: rgba(60, 64, 67, 0.26) 0px 1px 2px 0px, rgba(60, 64, 67, 0.05) 0px 1px 3px 1px;
-            }
-            &:hover .contein-img img{
-                transform: scale(1.4) rotate(20deg);
-            }
-            a{
-                text-decoration: none;
-                color: black;
-                .contein-img{
-                    overflow: hidden;
-                    img{
-                        width: 198px;
-                        height: 240px;
-                        object-fit: cover;
-                        transition: all .5s ease;
-                        width: 120%;
-                    }
-                }
-                & .data{
-                    display: flex;
-                    flex-direction: column; 
+            width: 300px;
+            height: 200px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.349);
+            position: relative;  
+            font-size: 14px;
+            .title{
+                position: absolute;
+                top: -10px;
+                left: -10px;
+                background-color: black;
+                padding: 10px 10px;
+                color: white;
+                z-index: 1;
+                font-weight: 600;
+            } 
+            .lastUser{
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                height: 140px;
+                img{ 
                     width: 100%;
-                        & .initial-data{
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin: 5px 0;
-                        padding: 0 15px;
-                        position: relative;
-                        & .name{
-                            font-size: 17px;
-                            margin-bottom: 10px;
-                        } 
-                    } 
+                    background-size: cover;
                 }
             }
-            
+            .last_email{
+                margin: 20px 10px;
+            }
         }
     }
 }    
