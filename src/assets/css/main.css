@@ -346,6 +346,39 @@
       .DashBoard_product .inform-product .contein-lastProduct .last_email {
         margin: 20px 10px; }
 
+.title-product {
+  margin: 40px 50px;
+  color: rgba(0, 0, 0, 0.76);
+  font-size: 20px; }
+
+.list_producto {
+  text-align: center;
+  margin: 0 auto;
+  border-collapse: collapse; }
+  .list_producto thead th {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.86);
+    border-bottom: 2px solid black;
+    padding-bottom: 5px; }
+  .list_producto tbody tr {
+    border-bottom: 1px solid rgba(6, 6, 6, 0.286); }
+    .list_producto tbody tr .name {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      padding: 10px 30px; }
+      .list_producto tbody tr .name img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px; }
+    .list_producto tbody tr .price {
+      padding: 10px 30px; }
+
 .users {
   margin-left: 300px;
   width: 100%;

@@ -15,7 +15,7 @@ export default function Products(){
         const endPoint = 'http://localhost:3000/restaurantes/listas'
         axios.get(endPoint)
             .then(response =>{
-                const apiData = response.data.lastProduct.productImg;
+                const apiData = response.data.data;
                 setProductList(apiData)  
             })
             .catch(error=>{

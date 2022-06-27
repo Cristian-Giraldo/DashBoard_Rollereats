@@ -60,4 +60,46 @@
             }
         }
     }
-}    
+}  
+.title-product{
+    margin: 40px 50px;
+    color: rgba(0, 0, 0, 0.76);
+    font-size: 20px;
+}
+.list_producto{
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: collapse;
+    thead{
+        th{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.86);
+            border-bottom: 2px solid black;
+            padding-bottom: 5px;
+        }
+    }
+    tbody{
+        tr{
+            border-bottom: 1px solid rgba(6, 6, 6, 0.286);
+            .name{
+                text-align: center;
+                font-size: 14px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                padding: 10px 30px;
+                img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+            }
+            .price{
+                padding: 10px 30px;
+            }
+        }
+    }
+}
